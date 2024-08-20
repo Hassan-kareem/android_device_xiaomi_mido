@@ -25,7 +25,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-droidx
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
@@ -159,8 +159,7 @@ PRODUCT_PACKAGES += \
     libcamshim \
     libui_shim \
     vendor.qti.hardware.camera.device@1.0 \
-    vendor.qti.hardware.camera.device@1.0.vendor \
-    Aperture
+    vendor.qti.hardware.camera.device@1.0.vendor
 
 # Cgroup and task_profiles
 PRODUCT_COPY_FILES += \
