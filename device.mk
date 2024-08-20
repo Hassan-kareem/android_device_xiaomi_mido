@@ -24,7 +24,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-aosp
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
@@ -166,7 +166,14 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0 \
     camera.msm8953 \
     libcamshim \
-    Snap
+    libui_shim \
+    vendor.qti.hardware.camera.device@1.0 \
+    vendor.qti.hardware.camera.device@1.0.vendor
+
+# Cgroup and task_profiles
+PRODUCT_COPY_FILES += \
+    system/core/libprocessgroup/profiles/cgroups_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
+    system/core/libprocessgroup/profiles/task_profiles_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
 # Consumerir
 PRODUCT_PACKAGES += \

@@ -629,24 +629,11 @@
     <!-- Whether to select voice/data/sms preference without user confirmation. -->
     <bool name="config_voice_data_sms_auto_fallback">true</bool>
 
-    <!-- Vibrator pattern for feedback about a long screen/key press -->
-    <integer-array name="config_longPressVibePattern">
-        <item>0</item>
-        <item>12</item>
-        <item>7</item>
-    </integer-array>
+    <!-- Whether to cancel fingerprint operation if not idle -->
+    <bool name="config_fpCancelIfNotIdle">true</bool>
 
-    <!-- Vibrator pattern for feedback about touching a virtual key -->
-    <integer-array name="config_virtualKeyVibePattern">
-        <item>0</item>
-        <item>12</item>
-        <item>7</item>
-    </integer-array>
-
-    <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap -->
-    <integer-array name="config_keyboardTapVibePattern">
-        <item>20</item>
-    </integer-array>
+    <!-- Feature flag to store TaskSnapshot in 16 bit pixel format to save memory. -->
+    <bool name="config_use16BitTaskSnapshotPixelFormat">true</bool>
 
     <!-- Display low battery warning when battery level dips to this value -->
     <integer name="config_lowBatteryWarningLevel">15</integer>
